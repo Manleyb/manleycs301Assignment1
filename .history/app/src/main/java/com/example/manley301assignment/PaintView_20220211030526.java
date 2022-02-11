@@ -8,7 +8,12 @@ import android.view.SurfaceView;
 import android.widget.SeekBar;
 //be sure to include credits
 
-public class View extends SurfaceView {
+public class PaintView extends SurfaceView {
+    //just found out that the reason for my never ending bugs is that I named my class view
+    //System.end.mySuffering();  I feel like there should be a warning or somthing for that
+    //I  will add it to the list of 10+ hour coding bug fixes
+
+
   // // implements OnClickListener, OnTouchListener, SeekBar.OnSeekBarChangeListener
    public CustomCircle circle0;
    private CustomCircle circle1;
@@ -16,6 +21,7 @@ public class View extends SurfaceView {
    private CustomCircle circle3;
    private CustomCircle circle4;
    private CustomCircle circle5;
+   private int numCircles;
 //  private CustomCircle[] circles ;
 
   // private Model aModel;
@@ -43,21 +49,25 @@ public class View extends SurfaceView {
 
 
 
-  public View(Context context, AttributeSet attrs) {
+  public PaintView(Context context, AttributeSet attrs) {
     super(context, attrs);
     setWillNotDraw(false);
     circle0 = new CustomCircle("circle0", Color.CYAN, 600, 600, 100);
 
-
+setWillNotDraw(false);
 
 
     // aModel = new Model(); // model used by whole program
 
   }
 
-  @Override
+    public PaintView(Context context) {
+        super(context);
+    }
+
+    @Override
   public void onDraw(Canvas canvas) {
-    circle0.drawMe(canvas);
+   // circle0.drawMe(canvas);
 
 
 //circles = new CustomCircle[6];
@@ -73,8 +83,8 @@ public class View extends SurfaceView {
 
     // setCircle(circle0);
 
-    // circle1 = new CustomCircle("circle1", Color.RED, 100, 100, 100);
-    // circle1.drawMe(canvas);
+     circle0 = new CustomCircle("circle1", Color.RED, 100, 100, 100);
+     circle0.drawMe(canvas);
 
     // circle2 = new CustomCircle("circle2", Color.BLUE, 200, 200, 100);
     // circle2.drawMe(canvas);
@@ -102,9 +112,9 @@ public class View extends SurfaceView {
 
   
 
-   public CustomCircle getCircle0() {
-     return this.circle0;
-   }
+//   public CustomCircle getCircle0() {
+//     return this.circle0;
+//   }
 
   // public int aTest(){
   // return 0;

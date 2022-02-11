@@ -10,6 +10,8 @@ Author: Bryce Manley
 Date: 2020-02-10
 Summary: This is the main activity for the application. It listnes for touch events and seekbar changes.
 It initializes the seekbars and textviews, as well as tthe controler class Control
+ 
+
 
 */
 

@@ -10,36 +10,66 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/surfaceView"
+        tools:ignore="NotSibling">
 
 
-
-        <SeekBar
-            android:id="@+id/seekBar3"
+        <TextView
+            android:id="@+id/RedString"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <SeekBar
-            android:id="@+id/seekBar2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Red:" />
 
         <SeekBar
             android:id="@+id/seekBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:max="256" />
+
+        <TextView
+            android:id="@+id/GreenString"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Green:" />
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="256" />
+
+        <TextView
+            android:id="@+id/BlueString"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blue:" />
+
+        <SeekBar
+            android:id="@+id/seekBar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="256" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="bottom"
-            android:text="TextView" />
+            android:text="  " />
 
-        <com.example.manley301assignment.View
-            android:id="@+id/surfaceView"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.example.manley301assignment.PaintView
+                android:id="@+id/surfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

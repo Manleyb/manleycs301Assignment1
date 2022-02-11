@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 
 /**
+ *Acknoledgement to DR.Nux for creating this Java program
  * <!-- class CustomElement -->
  * 
  * This class defines an element of a drawing. All such elements must have
